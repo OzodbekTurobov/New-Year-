@@ -1,0 +1,532 @@
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-transition: all 100ms ease-in;
+    transition: all 100ms ease-in;
+}
+
+html, body {
+    background-color:#1B1464;
+}
+
+.joy {
+    width: 100%;
+    font-family: 'Lobster', cursive;
+    font-size: 100px;
+    font-weight: 700;
+    color: #f53b57;
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    opacity: 0;
+    animation: vem_joy 2s ease-in-out 7s forwards;
+    text-shadow: 1px 1px 1px black;
+}
+
+.blessings{
+    width: 100%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 100px;
+    font-weight: 700;
+    color: #f1c40f;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+    position: absolute;
+    top: 110%;
+    opacity: 0;
+    animation: vem_bless 2s ease-in-out 7s forwards;
+}
+
+.new_year {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 200px 100px 0px 0px;
+    text-shadow: 1px 1px 1px black;
+    margin-left: 30px;
+}
+
+.new_year>span {
+    font-family: 'Lobster', cursive;
+    font-size: 175px;
+    font-weight: 700;
+    color: #c7ecee;
+    text-shadow: 1px 1px 1px cornsilk;
+    top:50%;
+}
+
+span.nineteen {
+    position: absolute;
+    top: 50%;
+    right: 55%;
+    margin-right: -100px;
+    animation: vai_2019 5s ease-in-out 5s forwards;
+    color: #182C61;
+}
+
+span.zero {
+    position: absolute;
+    right: 0%;
+    margin-right: -200px;
+    animation: vem_2020 6s ease-in-out forwards;
+}
+
+span.nineteen:before {
+    content: '';
+    width: 0px;
+    height: 6px;
+    display: block;
+    border-radius: 3px;
+    transform: rotate(0deg);
+    transform-origin: left top;
+    position: absolute;
+    top: 55px;
+    left: 50px;
+    z-index: -1;
+    animation: balloon_entry 1s ease-in-out 4s;
+}
+
+.balloon {
+    width: 80px;
+    height: 100px;
+    display: block;
+    background: #ff3f34;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    margin-top: -165px;
+    right: 0%;
+    margin-right: -200px;
+    animation: vem_balloon 10s ease-in-out forwards;
+}
+
+.balloon:after {
+    content: '';
+    width: 4px;
+    height: 100px;
+    display: block;
+    background: #fff;
+    border-radius: 0px 0px 3px 3px;
+    position: absolute;
+    left: 50%;
+    margin-left: -2px;
+    bottom: -110px;
+}
+
+.fire {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.fire>div {
+    border: 2px solid #fff;
+    position: absolute;
+    opacity: 0;
+    animation: free_fire 1.5s ease-in-out 8s forwards;
+}
+
+.fire>div.f1 {
+    left: 20%;
+    top: 40%;
+}
+
+.fire>div.f2 {
+    left: 15%;
+    top: 70%;
+}
+
+
+/*.fire>div.f3 {
+    right: 20%;
+    top: 40%;
+}*/
+
+.fire>div.f4 {
+    right: 15%;
+    top: 70%;
+}
+
+.fire>div span {
+    width: 6px;
+    height: 6px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: surround_fires 0.5s ease-in-out 9s forwards;
+}
+
+.fire>div span:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.fire>div span:nth-child(2) {
+    transform: rotate(120deg);
+}
+
+.fire>div span:nth-child(3) {
+    transform: rotate(240deg);
+}
+
+.fire>div span:before {
+    content: '';
+    width: 2px;
+    height: 50px;
+    display: block;
+    background: #f5cc06;
+    position: absolute;
+    top: -60px;
+    left: 2px;
+}
+
+.fire>div span:after {
+    content: '';
+    width: 2px;
+    height: 50px;
+    display: block;
+    background: #f5cc06;
+    position: absolute;
+    bottom: -60px;
+    left: 2px;
+}
+
+.fire>div span i:before {
+    content: '';
+    width: 3px;
+    height: 3px;
+    display: block;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+}
+
+.fire>div span i:after {
+    content: '';
+    width: 3px;
+    height: 3px;
+    display: block;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    top: -15px;
+    right: 10px;
+}
+
+a.developer {
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #f53b57;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+a:hover {
+    color: white;
+}
+
+img {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    width: 80px;
+}
+
+
+/*Mouvement des éléments*/
+
+
+/* remplacer un nombre par un autre*/
+
+@keyframes vai_2019 {
+    0% {
+        right: 0%;
+    }
+    66.6666% {
+        right: 50%;
+        margin-right: -300px;
+    }
+    90% {
+        right: 50%;
+        margin-right: -300px;
+    }
+    100% {
+        right: 50%;
+    }
+}
+
+@keyframes vem_balloon {
+    0% {
+        right: 0%;
+    }
+    50% {
+        right: 80%;
+        margin-right: -300px;
+    }
+    50% {
+        right: 50%;
+        margin-right: -100px;
+        top: 50%;
+    }
+    100% {
+        top: -200%;
+        right: 50%;
+    }
+}
+
+@keyframes balloon_entry {
+    0% {
+        transform: rotate(-30deg);
+        width: 40px;
+    }
+    100% {
+        transform: rotate(-150deg);
+        width: 70px;
+    }
+}
+
+
+/* Disparition du nombre*/
+
+@keyframes vai_2019 {
+    0% {
+        top: 50%;
+    }
+    100% {
+        top: -100%;
+    }
+}
+
+
+/* Apparition Happy New year*/
+
+@keyframes vem_joy {
+    0% {
+        margin-top: 0px;
+        opacity: 0;
+    }
+    100% {
+        margin-top: -200px;
+        ;
+        opacity: 1;
+    }
+}
+
+@keyframes vem_bless {
+    0% {
+        margin-top: 0px;
+        opacity: 0;
+    }
+    100% {
+        margin-top: -200px;
+        ;
+        opacity: 1;
+    }
+}
+
+
+/* Apparition 4 cercles blancs */
+
+@keyframes free_fire {
+    0% {
+        margin-top: 100%;
+        opacity: 0;
+        width: 2px;
+        height: 30px;
+        display: block;
+        border-radius: 50%;
+    }
+    75% {
+        margin-top: 0%;
+        opacity: 1;
+        width: 2px;
+        height: 30px;
+        display: block;
+        border-radius: 50%;
+    }
+    80% {
+        margin-top: 0px;
+        margin-left: 0px;
+        opacity: 1;
+        width: 10px;
+        height: 10px;
+        display: block;
+        border-radius: 50%;
+        transform: scale(0.2);
+    }
+    100% {
+        opacity: 1;
+        width: 10px;
+        height: 10px;
+        display: block;
+        border-radius: 50%;
+        transform: scale(1);
+    }
+}
+
+
+/*Feux d'artifices */
+
+@keyframes surround_fires {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/*Responsive*/
+
+@media screen and (min-width: 414px) and (max-width: 736px) {
+    .joy {
+        font-size: 50px;
+    }
+    .new_year>span {
+        font-size: 100px;
+        margin-top: -150px;
+    }
+    .blessings {
+        font-size: 50px;
+    }
+    .avatar img {
+        height: 30px;
+        max-width: 30px;
+    }
+    a.developer {
+        text-decoration: underline;
+    }
+    span.nineteen {
+        top: auto;
+        margin-right: -80px
+    }
+}
+
+@media screen and (min-width:375px) and (max-width: 667px) {
+    .joy {
+        font-size: 50px;
+    }
+    .new_year>span {
+        font-size: 100px;
+        margin-top: -150px;
+    }
+    .avatar img {
+        height: 30px;
+        max-width: 30px;
+    }
+    a.developer {
+        text-decoration: underline;
+    }
+    .blessings {
+        font-size: 50px;
+    }
+    span.nineteen {
+        top: auto;
+        margin-right: -80px
+    }
+}
+
+@media screen and (min-width:320px) and (max-width: 568px) {
+    .joy {
+        font-size: 40px;
+    }
+    .new_year>span {
+        font-size: 100px;
+    }
+    .blessings {
+        font-size: 40px;
+    }
+    .avatar img {
+        height: 30px;
+        max-width: 30px;
+    }
+    a.developer {
+        text-decoration: underline;
+    }
+    .new_year>span {
+        font-size: 100px;
+        margin-top: -150px;
+    }
+    span.nineteen {
+        top: auto;
+        margin-right: -80px
+    }
+}
+
+@media screen and (min-width:768px) and (max-width: 1024px) {
+    html {
+        background-size: cover;
+    }
+    .blessings {
+        font-size: 70px;
+        top: 90%;
+    }
+    .avatar img {
+        height: 30px;
+        max-width: 30px;
+    }
+    a.developer {
+        text-decoration: underline;
+    }
+}
+
+@media screen and (min-width: 720x) and (max-width: 1480x) {
+    .joy {
+        font-size: 100px;
+        top: 25%;
+    }
+    .new_year>span {
+        font-size: 200px;
+    }
+    .avatar img {
+        height: 30px;
+        max-width: 30px;
+    }
+    a.developer {
+        text-decoration: underline;
+    }
+    .blessings {
+        font-size: 80px;
+        top: 90%;
+    }
+}
+
+@media screen and (min-width:414px) and (max-width: 896px) {
+    .new_year>span {
+        font-size: 120px;
+    }
+    .joy {
+        font-size: 55px;
+        top: 40%;
+    }
+    .avatar img {
+        height: 30px;
+        max-width: 30px;
+    }
+    a.developer {
+        text-decoration: underline;
+    }
+    .blessings {
+        top: 100%;
+    }
+}
